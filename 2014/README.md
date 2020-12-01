@@ -2,7 +2,7 @@
 # 2014-10-22 21:20:59   大街网
 1. 集合类型树  http://skyuck.iteye.com/blog/526358
 
-答案：  collections
+ 答案：  collections
 
     map  set  list
     
@@ -40,9 +40,9 @@ http://www.cnblogs.com/qqlin/archive/2012/10/09/2707075.html
 
     答案：http://gogole.iteye.com/blog/692103
     
-http://blog.csdn.net/beiyeqingteng/article/details/7010411
+    http://blog.csdn.net/beiyeqingteng/article/details/7010411
 
-        用双向链表实现
+    用双向链表实现
         
 4. mysql给url建索引？ 数据库引擎
 
