@@ -104,12 +104,12 @@
 - mysql的索引类型，实现机制
 - java的引用类型，方法内new个新的对象会怎样
 - java方法中参数传递的都是值，不过基本类型传递的是值本身，引用类型传递的是引用对象的地址；到达方法之后会在栈中开辟一个新的地址存放传进来的值或者引用的地址。
-    针对基本类型，在方法内修改入参，改变的只是方法栈中的值，不会影响调用方法前变量的值，因为是存放在栈的不同位置。
-    针对引用类型，在方法内修改入参的属性，改变的是该引用对象在堆内地址的值，而方法内核方法外的引用指向的都是同一个地址，所以对属性的更改会表现在方法外。而如果是在方法内new一个新对象，则方法内引用的就是堆内一个新地址的对象，与方法外的引用对象不是同一个。
-    针对shtring，虽然string是一个引用类型，可是表现却和基本类型一致。
+--    针对基本类型，在方法内修改入参，改变的只是方法栈中的值，不会影响调用方法前变量的值，因为是存放在栈的不同位置。
+--    针对引用类型，在方法内修改入参的属性，改变的是该引用对象在堆内地址的值，而方法内核方法外的引用指向的都是同一个地址，所以对属性的更改会表现在方法外。而如果是在方法内new一个新对象，则方法内引用的就是堆内一个新地址的对象，与方法外的引用对象不是同一个。
+--    针对shtring，虽然string是一个引用类型，可是表现却和基本类型一致。
 - 算法，聚合的实现
 - memcache存储的结构
-> http://blog.csdn.net/wusuopuBUPT/article/details/18238003
+-- http://blog.csdn.net/wusuopuBUPT/article/details/18238003
 - spring的特点，aop及其设计模式
 - sql in的例子
 
@@ -117,15 +117,18 @@
 
 # 2015年6月8日 19:13:39  百度商业平台研发部
 先是介绍项目，接着算法题，然后开放性的问擅长java哪些工具（集合类、concurrent包之类的），然后又是算法题。
-1、求n个数中最小的k个http://blog.csdn.net/fisher_jiang/article/details/2473698
+- 求n个数中最小的k个http://blog.csdn.net/fisher_jiang/article/details/2473698
+(```)
     a\内存中记录k个数，O（kn）
     b\构造k节点的大顶堆，遍历n，与顶点比较并维护堆，O（klogn）
     c\败者树
-2、10个运动员，裁判发令，等运动员结束或者超时后汇报结果
-3、集合类型
-http://www.cnblogs.com/xwdreamer/archive/2012/05/30/2526822.html
-http://www.importnew.com/16138.html
-4、java关键字 volatile
+(```)
+- 10个运动员，裁判发令，等运动员结束或者超时后汇报结果
+- 集合类型
+-- http://www.cnblogs.com/xwdreamer/archive/2012/05/30/2526822.html
+-- http://www.importnew.com/16138.html
+- java关键字 volatile
+(```)
 http://blog.chinaunix.net/uid-26806098-id-3182336.html
 http://www.cnblogs.com/wenjiang/p/3276433.html
 http://blog.csdn.net/fanaticism1/article/details/9966163
@@ -134,14 +137,17 @@ velotile和线程http://www.cnblogs.com/wenjiang/p/3276433.html
 volatile告诉编译器它修饰的变量是易变的，对其的访问不做优化 -- 主寄存器和线程寄存器，线程看到的是其寄存器的副本，如果线程共享变量就看不到其他线程对变量的修改；volatile使得线程对变量的读取修改都通过主内存实时进行，这样线程间可以看到其他进程的修改。---volatile提供了对变量一致性的保证，也即可见性；volatile仅能作用在变量上，且只有自身值的修改与自身之前的值无关时才有效。
 synchronized是修饰方法或者代码块，保证同时只有一个线程执行该段代码。当一个线程访问synchronized代码块时，其他线程对代码块的访问将会造成等待阻塞；synchronzied不仅保证了对变量的可见性，也保证了互斥性，比volatile同步粒度更大，但带来的消耗也更大
 static声明变量的唯一性
-
-5、java内存结构http://www.cnblogs.com/gw811/archive/2012/10/18/2730117.html
+(```)
+- java内存结构
+(```)
+http://www.cnblogs.com/gw811/archive/2012/10/18/2730117.html
 http://www.cnblogs.com/dingyingsi/p/3760447.html
-
+(```)
 
 # 2015年3月26日 10:11:45  网易乐得
 公司印象：安静、台式机、加班给钱、打卡&弹性上下班，一周加班2-3天到9点、团队不大，处于五道口
-1、servlet是单例还是多例的 -- servlet详细
+- servlet是单例还是多例的 -- servlet详细
+(```)
 Servlet容器默认是采用单实例多线程的方式处理多个请求的：
 1.      当web服务器启动的时候（或客户端发送请求到服务器时），Servlet就被加载并实例化（只存在一个Servlet实例）；
 
@@ -152,8 +158,10 @@ Servlet容器默认是采用单实例多线程的方式处理多个请求的：
 4.      线程执行Servlet的service方法；
 
 5.      请求结束，放回线程池，等到被调用；
-2、jvm调优http://unixboy.iteye.com/blog/174173
-3、重写equals方法的原则
+(```)
+- jvm调优http://unixboy.iteye.com/blog/174173
+- 重写equals方法的原则
+(```)
 一。 在重写equals方法时，要注意满足离散数学上的特性
 1   自反性：对任意引用值X，x.equals(x)的返回值一定为true.
 2   对称性：对于任何引用值x,y,当且仅当y.equals(x)返回值为true时，x.equals(y)的返回值一定为true;
@@ -175,12 +183,14 @@ Servlet容器默认是采用单实例多线程的方式处理多个请求的：
 5. 当你编写完成了equals方法之后，应该问自己三个问题：它是否是对称的、传 
 　　递的、一致的？(其他两个特性通常会自行满足)如果答案是否定的，那么请找到 
 　　这些特性未能满足的原因，再修改equals方法的代码。
-4、java类中的设计模式http://www.uml.org.cn/j2ee/201010214.asp
+(```)
+- java类中的设计模式http://www.uml.org.cn/j2ee/201010214.asp
 单例模式 --- java.lang.Math
 装饰模式---java中的IO流的类层次 InputStream OutputStream
     
 
-5、HashMap、HashTable、CurrentHashMap的区别
+- HashMap、HashTable、CurrentHashMap的区别
+(```)
 CorrentHashMap和hashTable的区别http://blog.csdn.net/kobejayandy/article/details/16834311
 hashmap和hashtable的区别http://www.importnew.com/7010.html
 hashMap的工作原理http://www.importnew.com/7099.html
@@ -194,15 +204,19 @@ HashMap的工作原理：HashMap基于hashing原理，我们通过put()和get()�
 为什么String, Interger这样的wrapper类适合作为键？ ：String, Interger这样的wrapper类作为HashMap的键是再适合不过了，而且String最为常用。因为String是不可变的，也是final的，而且已经重写了equals()和hashCode()方法了。其他的wrapper类也有这个特点。不可变性是必要的，因为为了要计算hashCode()，就要防止键值改变，如果键值在放入时和获取时返回不同的hashcode的话，那么就不能从HashMap中找到你想要的对象。不可变性还有其他的优点如线程安全。如果你可以仅仅通过将某个field声明成final就能保证hashCode是不变的，那么请这么做吧。因为获取对象的时候要用到equals()和hashCode()方法，那么键对象正确的重写这两个方法是非常重要的。如果两个不相等的对象返回不同的hashcode的话，那么碰撞的几率就会小些，这样就能提高HashMap的性能。
 我们可以使用自定义的对象作为键吗？：可以，只要遵守equals()和hashCode()方法的定义规则
 我们可以使用CocurrentHashMap来代替Hashtable吗？：。我们知道Hashtable是synchronized的，但是ConcurrentHashMap同步性能更好，因为它仅仅根据同步级别对map的一部分进行上锁。ConcurrentHashMap当然可以代替HashTable，但是HashTable提供更强的线程安全性。
-
-6、linux常用命令
+(```)
+- linux常用命令
+(```)
 cat
 tac
 head
 tail
 cat /proc/cpuinfo  ： 查看cpu的信息
+(```)
 
-7、java中的内存泄漏  http://www.cnblogs.com/qq78292959/archive/2011/07/25/2116123.html
+- java中的内存泄漏  
+(```)
+http://www.cnblogs.com/qq78292959/archive/2011/07/25/2116123.html
 java中的gc通过引用来判断内存是否使用，如果不再使用的对象依然有引用，就会造成内存泄漏，或者叫对象游离
 1 Vector v=new Vector(10);
 2 for (int i=1;i<100; i++){
@@ -210,9 +224,12 @@ java中的gc通过引用来判断内存是否使用，如果不再使用的对�
 4 v.add(o);
 5 o=null;
 6 }
-8、运行时异常和非运行时异常
+(```)
+- 运行时异常和非运行时异常
+(```)
 Java提供了两类主要的异常:runtime exception和checked exception。checked异常也就是我们经常遇到的IO异常，以及SQL异常都是这种异常。对于这种异常，JAVA编译器强制要求我们必需对出现的这些异常进行catch。所以，面对这种异常不管我们是否愿意，只能自己去写一大堆catch块去处理可能的异常。      
 但是另外一种异常：runtime exception，也称运行时异常，我们可以不处理。当出现这样的异常时，总是由虚拟机接管。比如：我们从来没有人去处理过NullPointerException异常，它就是运行时异常，并且这种异常还是最常见的异常之一。      
 出现运行时异常后，系统会把异常一直往上层抛，一直遇到处理代码。如果没有处理块，到最上层，如果是多线程就由Thread.run()抛出，如果是单线程就被main()抛出。抛出之后，如果是线程，这个线程也就退出了。如果是主程序抛出的异常，那么这整个程序也就退出了。运行时异常是Exception的子类，也有一般异常的特点，是可以被Catch块处理的。只不过往往我们不对他处理罢了。也就是说，你如果不对运行时异常进行处理，那么出现运行时异常之后，要么是线程中止，要么是主程序终止。      
 如果不想终止，则必须扑捉所有的运行时异常，决不让这个处理线程退出。队列里面出现异常数据了，正常的处理应该是把异常数据舍弃，然后记录日志。不应该由于异常数据而影响下面对正常数据的处理。在这个场景这样处理可能是一个比较好的应用，但并不代表在所有的场景你都应该如此。如果在其它场景，遇到了一些错误，如果退出程序比较好，这时你就可以不太理会运行时异常，或者是通过对异常的处理显式的控制程序退出。
 异常处理的目标之一就是为了把程序从异常中恢复出来。
+(```)
