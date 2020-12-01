@@ -1,9 +1,9 @@
 
 # 20150717快的
-- 大数据变现部门
-- 快排
-- redis怎么实现大数据量hash的速度
-- 两堆大量整数求差集
++ 大数据变现部门
++ 快排
++ redis怎么实现大数据量hash的速度
++ 两堆大量整数求差集
 
 
 
@@ -219,17 +219,18 @@ Servlet容器默认是采用单实例多线程的方式处理多个请求的：
 
 - linux常用命令
 
--+ cat
--+ tac
--+ head
--+ tail
--+ cat /proc/cpuinfo  ： 查看cpu的信息
+1. cat
+2. tac
+3. head
+4. tail
+5. cat /proc/cpuinfo  ： 查看cpu的信息
 
 
 - java中的内存泄漏  
 
     http://www.cnblogs.com/qq78292959/archive/2011/07/25/2116123.html
     java中的gc通过引用来判断内存是否使用，如果不再使用的对象依然有引用，就会造成内存泄漏，或者叫对象游离
+    
 (```)
     Vector v=new Vector(10);
     for (int i=1;i<100; i++){
@@ -238,6 +239,7 @@ Servlet容器默认是采用单实例多线程的方式处理多个请求的：
     o=null;
     }
 (```)
+
 - 运行时异常和非运行时异常
 
     Java提供了两类主要的异常:runtime exception和checked exception。checked异常也就是我们经常遇到的IO异常，以及SQL异常都是这种异常。对于这种异常，JAVA编译器强制要求我们必需对出现的这些异常进行catch。所以，面对这种异常不管我们是否愿意，只能自己去写一大堆catch块去处理可能的异常。      
