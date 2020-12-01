@@ -73,11 +73,16 @@
 - 如何设计hashmap的key对象的hashcode
 - 泛型通配符，什么情况下用
 - 场景式的问题:秒杀,能列出常见的排队、验证码、库存扣减方式对系统高并发的影响
+
     http://blog.sina.com.cn/s/blog_63d8dad801019wrh.html
+    
     http://www.zhihu.com/question/20496392
+    
 - ehcache
 - tcp/ip；http
+
     http://kb.cnblogs.com/page/209100/
+    
 - 熟悉主流分布式文件系统FastDFS等。
 - 熟悉JMS，可熟练使用ActiveMQ。
 - 长连接 短连接
@@ -88,18 +93,28 @@
 
 # 2015年6月12日 14:28:54  阿里云电话面
 - spring aop的设计模式
-> 代理模式
+
+    代理模式
+    
 - mysql的存储引擎，及区别
-> mysql所有b+tree http://blog.jobbole.com/24006/
+    
+    mysql所有b+tree http://blog.jobbole.com/24006/
+    
 - arrayList linkedList的区别
 - redis删除后会从内存删掉么？什么时机删掉
--- 删除的时候不删除，再次查询到的时候才去删除
+        
+    删除的时候不删除，再次查询到的时候才去删除
+    
 - java 泛型，和其它语言泛型的区别，Integer包装类在泛型中应用
 - 5个线程，1一个一组另4个一组，实现组间串行，组内并行
--- CountDownLatch
+    
+    CountDownLatch
+    
 - Memcache内部是怎么实现原子操作的
 - Integer、int的区别
-> Integer a\b = 100 c\d = 200判断相等关系。
+    
+    Integer a\b = 100 c\d = 200判断相等关系。
+    
 - java反射机制
 
 # 6月11日  滴滴    当代城市家园9月份去上地软件园
@@ -107,89 +122,124 @@
 - mysql的索引类型，实现机制
 - java的引用类型，方法内new个新的对象会怎样
 - java方法中参数传递的都是值，不过基本类型传递的是值本身，引用类型传递的是引用对象的地址；到达方法之后会在栈中开辟一个新的地址存放传进来的值或者引用的地址。
---    针对基本类型，在方法内修改入参，改变的只是方法栈中的值，不会影响调用方法前变量的值，因为是存放在栈的不同位置。
---    针对引用类型，在方法内修改入参的属性，改变的是该引用对象在堆内地址的值，而方法内核方法外的引用指向的都是同一个地址，所以对属性的更改会表现在方法外。而如果是在方法内new一个新对象，则方法内引用的就是堆内一个新地址的对象，与方法外的引用对象不是同一个。
---    针对shtring，虽然string是一个引用类型，可是表现却和基本类型一致。
+
+    针对基本类型，在方法内修改入参，改变的只是方法栈中的值，不会影响调用方法前变量的值，因为是存放在栈的不同位置。
+    
+    针对引用类型，在方法内修改入参的属性，改变的是该引用对象在堆内地址的值，而方法内核方法外的引用指向的都是同一个地址，所以对属性的更改会表现在方法外。而如果是在方法内new一个新对象，则方法内引用的就是堆内一个新地址的对象，与方法外的引用对象不是同一个。
+    
+    针对shtring，虽然string是一个引用类型，可是表现却和基本类型一致。
+    
 - 算法，聚合的实现
 - memcache存储的结构
--- http://blog.csdn.net/wusuopuBUPT/article/details/18238003
+    
+    http://blog.csdn.net/wusuopuBUPT/article/details/18238003
+    
 - spring的特点，aop及其设计模式
 - sql in的例子
 
 
 
 # 2015年6月8日 19:13:39  百度商业平台研发部
-先是介绍项目，接着算法题，然后开放性的问擅长java哪些工具（集合类、concurrent包之类的），然后又是算法题。
-- 求n个数中最小的k个http://blog.csdn.net/fisher_jiang/article/details/2473698
-(```)
-    a\内存中记录k个数，O（kn）
-    b\构造k节点的大顶堆，遍历n，与顶点比较并维护堆，O（klogn）
-    c\败者树
-(```)
+> 先是介绍项目，接着算法题，然后开放性的问擅长java哪些工具（集合类、concurrent包之类的），然后又是算法题。
+- 求n个数中最小的k个
+    http://blog.csdn.net/fisher_jiang/article/details/2473698
+    
+    1. 内存中记录k个数，O（kn）
+    2. 构造k节点的大顶堆，遍历n，与顶点比较并维护堆，O（klogn）
+    3. 败者树
+
 - 10个运动员，裁判发令，等运动员结束或者超时后汇报结果
 - 集合类型
--- http://www.cnblogs.com/xwdreamer/archive/2012/05/30/2526822.html
--- http://www.importnew.com/16138.html
+
+    http://www.cnblogs.com/xwdreamer/archive/2012/05/30/2526822.html
+    
+    http://www.importnew.com/16138.html
+    
 - java关键字 volatile
-(```)
-http://blog.chinaunix.net/uid-26806098-id-3182336.html
+
+    http://blog.chinaunix.net/uid-26806098-id-3182336.html
+    
 http://www.cnblogs.com/wenjiang/p/3276433.html
+
 http://blog.csdn.net/fanaticism1/article/details/9966163
+
 volatile和static的区别http://blog.sina.com.cn/s/blog_4e1e357d0101i486.html
+
 velotile和线程http://www.cnblogs.com/wenjiang/p/3276433.html
-volatile告诉编译器它修饰的变量是易变的，对其的访问不做优化 -- 主寄存器和线程寄存器，线程看到的是其寄存器的副本，如果线程共享变量就看不到其他线程对变量的修改；volatile使得线程对变量的读取修改都通过主内存实时进行，这样线程间可以看到其他进程的修改。---volatile提供了对变量一致性的保证，也即可见性；volatile仅能作用在变量上，且只有自身值的修改与自身之前的值无关时才有效。
-synchronized是修饰方法或者代码块，保证同时只有一个线程执行该段代码。当一个线程访问synchronized代码块时，其他线程对代码块的访问将会造成等待阻塞；synchronzied不仅保证了对变量的可见性，也保证了互斥性，比volatile同步粒度更大，但带来的消耗也更大
-static声明变量的唯一性
-(```)
+
+    volatile告诉编译器它修饰的变量是易变的，对其的访问不做优化 -- 主寄存器和线程寄存器，线程看到的是其寄存器的副本，如果线程共享变量就看不到其他线程对变量的修改；volatile使得线程对变量的读取修改都通过主内存实时进行，这样线程间可以看到其他进程的修改。---volatile提供了对变量一致性的保证，也即可见性；volatile仅能作用在变量上，且只有自身值的修改与自身之前的值无关时才有效。
+    
+    synchronized是修饰方法或者代码块，保证同时只有一个线程执行该段代码。当一个线程访问synchronized代码块时，其他线程对代码块的访问将会造成等待阻塞；synchronzied不仅保证了对变量的可见性，也保证了互斥性，比volatile同步粒度更大，但带来的消耗也更大
+    static声明变量的唯一性
+
 - java内存结构
-(```)
-http://www.cnblogs.com/gw811/archive/2012/10/18/2730117.html
-http://www.cnblogs.com/dingyingsi/p/3760447.html
-(```)
+
+    http://www.cnblogs.com/gw811/archive/2012/10/18/2730117.html
+    
+    http://www.cnblogs.com/dingyingsi/p/3760447.html
+
 
 # 2015年3月26日 10:11:45  网易乐得
 公司印象：安静、台式机、加班给钱、打卡&弹性上下班，一周加班2-3天到9点、团队不大，处于五道口
 - servlet是单例还是多例的 -- servlet详细
-(```)
-Servlet容器默认是采用单实例多线程的方式处理多个请求的：
-1.      当web服务器启动的时候（或客户端发送请求到服务器时），Servlet就被加载并实例化（只存在一个Servlet实例）；
 
-2.      容器初始化Servlet。主要就是读取配置文件（例如tomcat，可以通过servlet.xml的<Connector>设置线程池中线程数目，初始化线程池；通过web.xml，初始化每个参数值等等）；
+    Servlet容器默认是采用单实例多线程的方式处理多个请求的：
+    1.当web服务器启动的时候（或客户端发送请求到服务器时），Servlet就被加载并实例化（只存在一个Servlet实例）；
+    2.容器初始化Servlet。主要就是读取配置文件（例如tomcat，可以通过servlet.xml的<Connector>设置线程池中线程数目，初始化线程池；通过web.xml，初始化每个参数值等等）；
+    3.当请求到达时，Servlet容器通过调度线程（Dispatchaer Thread）调度它管理下的线程池中等待执行的线程（Worker Thread）给请求者；
+    4.线程执行Servlet的service方法；
+    5.请求结束，放回线程池，等到被调用；
 
-3.      当请求到达时，Servlet容器通过调度线程（Dispatchaer Thread）调度它管理下的线程池中等待执行的线程（Worker Thread）给请求者；
+- jvm调优
 
-4.      线程执行Servlet的service方法；
-
-5.      请求结束，放回线程池，等到被调用；
-(```)
-- jvm调优http://unixboy.iteye.com/blog/174173
+    http://unixboy.iteye.com/blog/174173
+    
 - 重写equals方法的原则
-(```)
+
 一。 在重写equals方法时，要注意满足离散数学上的特性
+
 1   自反性：对任意引用值X，x.equals(x)的返回值一定为true.
+
 2   对称性：对于任何引用值x,y,当且仅当y.equals(x)返回值为true时，x.equals(y)的返回值一定为true;
+
 3   传递性：如果x.equals(y)=true, y.equals(z)=true,则x.equals(z)=true
+
 4   一致性：如果参与比较的对象没任何改变，则对象比较的结果也不应该有任何改变
+
 5   非空性：任何非空的引用值X，x.equals(null)的返回值一定为false 
+
 二。 在重写equals方法时，还要顺手把 hashCode方法一起重写了。
-     这一点主要是考虑和集合类协同工作的需要。一般集合为加快存取速度，通常使用类hashtable的方式存取对象， hashCode() && equals() 则是判断待查找元素与集合中某个元素相等的依据。 而java中默认的hashCode是由对象的内存地址生成的, 如果重写了equals 而 不重写 hashCode， 则会造成“A和B相等，A加入集合后，用B查询集合却查不到”的悖论。 
-当然了，以上只是约束条件，关键还是要符合自己设计的初衷，把最起码的相等判别逻辑给无视了。 
+
+    这一点主要是考虑和集合类协同工作的需要。一般集合为加快存取速度，通常使用类hashtable的方式存取对象， hashCode() && equals() 则是判断待查找元素与集合中某个元素相等的依据。 而java中默认的hashCode是由对象的内存地址生成的, 如果重写了equals 而 不重写 hashCode， 则会造成“A和B相等，A加入集合后，用B查询集合却查不到”的悖论。 
+    
+    当然了，以上只是约束条件，关键还是要符合自己设计的初衷，把最起码的相等判别逻辑给无视了。 
+    
 三。重写equals方法的一般步骤：
+
 1. 使用==操作符检查“实参是否为指向对象的一个引用”。 
+
 2. 使用instanceof操作符检查“实参是否为正确的类型”。 
+
 3. 把实参转换到正确的类型。 
+
 4. 对于该类中每一个“关键”域，检查实参中的域与当前对象中对应的域值是否匹 配。
+
           a。对于既不是float也不是double类型的基本类型的域，可以使用==操作符进行比较（why？）；
+          
           b。对于对象引用类型的域，可以递归地调用所引用的对象的equals方法； 
+          
 　　    c。对于float类型的域，先使用Float.floatToIntBits转换成int类型的值， 然后使用==操作符比较int类型的值；
+      
           d。对于double类型的域，先使用Double.doubleToLongBits转换成long类型的值，然后使用==操作符比较long类型的值。
-5. 当你编写完成了equals方法之后，应该问自己三个问题：它是否是对称的、传 
-　　递的、一致的？(其他两个特性通常会自行满足)如果答案是否定的，那么请找到 
-　　这些特性未能满足的原因，再修改equals方法的代码。
-(```)
-- java类中的设计模式http://www.uml.org.cn/j2ee/201010214.asp
+          
+5. 当你编写完成了equals方法之后，应该问自己三个问题：它是否是对称的、传递的、一致的？(其他两个特性通常会自行满足)如果答案是否定的，那么请找到这些特性未能满足的原因，再修改equals方法的代码。
+
+- java类中的设计模式
+
+    http://www.uml.org.cn/j2ee/201010214.asp
 
     单例模式 --- java.lang.Math
+    
     装饰模式---java中的IO流的类层次 InputStream OutputStream
     
 
@@ -236,10 +286,15 @@ Servlet容器默认是采用单实例多线程的方式处理多个请求的：
     
 (```)
     Vector v=new Vector(10);
+    
     for (int i=1;i<100; i++){
+    
     Object o=new Object();
+    
     v.add(o);
+    
     o=null;
+    
     }
 (```)
 
