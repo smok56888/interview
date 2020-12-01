@@ -219,18 +219,18 @@ Servlet容器默认是采用单实例多线程的方式处理多个请求的：
 
 - linux常用命令
 
--- cat
--- tac
--- head
--- tail
--- cat /proc/cpuinfo  ： 查看cpu的信息
+-+ cat
+-+ tac
+-+ head
+-+ tail
+-+ cat /proc/cpuinfo  ： 查看cpu的信息
 
 
 - java中的内存泄漏  
 
     http://www.cnblogs.com/qq78292959/archive/2011/07/25/2116123.html
     java中的gc通过引用来判断内存是否使用，如果不再使用的对象依然有引用，就会造成内存泄漏，或者叫对象游离
-    (```)
+(```)
     Vector v=new Vector(10);
     for (int i=1;i<100; i++){
     Object o=new Object();
